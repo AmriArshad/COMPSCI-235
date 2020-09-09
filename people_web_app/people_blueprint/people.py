@@ -29,4 +29,7 @@ def find_person():
     pass
 
 
-
+class SearchForm(FlaskForm):
+    
+    person_id = IntegerField('Person id')
+    submit = SubmitField('Find')
