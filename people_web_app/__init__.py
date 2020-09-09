@@ -9,6 +9,10 @@ def create_app():
 
     app.config.from_object('config.Config')
     
+    with app.app_context():
+        from .people_blueprint import people
+        app.register_blueprint(people.people_blueprint)
+
     repo.repo_instance = repo.PeopleRepository(
         Person(74633, 'Julius', 'Caeser'),
         Person(88337, 'Genghis', 'Khan'),
