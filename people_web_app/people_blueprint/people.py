@@ -2,7 +2,6 @@ from flask import Blueprint, render_template, url_for
 from flask_wtf import FlaskForm
 from wtforms import IntegerField, SubmitField
 from wtforms.validators import DataRequired
-from people_web_app.domain.model import Person
 
 import people_web_app.adapters.repository as repo
 
