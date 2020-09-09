@@ -7,6 +7,8 @@ from people_web_app.domain.model import Person
 def create_app():
     app = Flask(__name__)
 
+    app.config.from_object('config.Config')
+    
     repo.repo_instance = repo.PeopleRepository(
         Person(74633, 'Julius', 'Caeser'),
         Person(88337, 'Genghis', 'Khan'),
